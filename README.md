@@ -25,6 +25,12 @@ uint64_t freq_Hz = 1000000; /* 4 kHz< freq < 225 Mhz */
 uint8_t set_freq_result = Si5351_set_freq(si5351, i*100, SI5351_CLK0);
 Si5351_output_enable(si5351, SI5351_CLK0, 1);
 ```
+Check status registers:
+```
+HAL_Delay(500); /* Insert a delay if Si5351_update_status is called right after changing Si5351 settings */
+Si5351_update_status(si5351);
+struct Si5351Status status5351 = Si5351_status(si5351);
+```
 Set drive strength if desired:
 
 ```
