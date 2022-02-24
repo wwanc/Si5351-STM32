@@ -27,7 +27,7 @@ Si5351_output_enable(si5351, SI5351_CLK0, 1);
 ```
 Check status registers:
 ```
-HAL_Delay(500); /* Insert a delay if Si5351_update_status() is called right after changing Si5351 settings */
+HAL_Delay(500); /* Insert a delay if Si5351_update_status() is called right after Si5351 settings are changed */
 Si5351_update_status(si5351);
 struct Si5351Status status5351 = Si5351_status(si5351);
 ```
