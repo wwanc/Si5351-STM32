@@ -10,7 +10,7 @@ Modify the include line below in si5351_def.h according to the device family:
 ```
 Include si5351_c_wrapper.h, for exmaple in main.c:
 ```
-/* main. c */
+/* main.c */
 #include "si5351_c_wrapper.h"
 ```
 Create and initialize a Si5351 struct after the initialization of the I2C interfaces:
