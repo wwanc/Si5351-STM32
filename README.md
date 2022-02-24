@@ -21,7 +21,7 @@ Si5351_init(si5351, SI5351_CRYSTAL_LOAD_10PF, 0, 0);
 ```
 Set output frequency and enable clock output:
 ```
-uint64_t freq_Hz = 1000000;
+uint64_t freq_Hz = 1000000; /* 4 kHz< freq < 225 Mhz */
 uint8_t set_freq_result = Si5351_set_freq(si5351, i*100, SI5351_CLK0);
 Si5351_output_enable(si5351, SI5351_CLK0, 1);
 ```
